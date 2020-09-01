@@ -8,47 +8,90 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <div id="header-img-left">
+        <img src="images/github.PNG" alt="github-logo">
+    </div>
     <div id="sidenav" class="left">
         <nav id="navbar">
             <header>
                 <h1>Github Technical Documentation</h1>
             </header>
             <ul class="nav">
-                <li><a href="">Introduction</a></li>
-                <li><a href="">Add to Git</a></li>
-                <li><a href="">Commit Changes</a></li>
-                <li><a href="">Push the Changes to Git</a></li>
-                <li><a href="">Get an URL with gh-pages</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#add">Add to Git</a></li>
+                <li><a href="#commit">Commit Changes</a></li>
+                <li><a href="#push">Push the Changes to Git</a></li>
+                <li><a href="#url">Get an URL with gh-pages</a></li>
             </ul>
         </nav>
     </div>
     <div>
         <main id="main-doc">
-            <section id="" class="main-section">
-                <header>Introduction</header>
-                <p></p>
-                <p></p>
+            <section id="introduction" class="main-section">
+                <header><h2>Introduction</h2></header>
+                <p>
+                    GitHub, Inc. is an American corporation that provides hosting for software development and version control using Git. 
+                    It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. 
+                    It provides access control and several collaboration features such as bug tracking, feature requests, task management, 
+                    and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018.
+                </p>
+                <p>
+                    GitHub offers its basic services free of charge. Its more advanced professional and enterprise services are commercial. 
+                    Free GitHub accounts are commonly used to host open-source projects. As of January 2019, GitHub offers unlimited private 
+                    repositories to all plans, including free accounts, but allowed only up to three collaborators per repository for free.
+                </p>
                 <code></code>
             </section>
-            <section id="" class="main-section">
-                <header>Add to Git</header>
-                <p></p>
-                <p></p>
-                <code></code>
+            <section id="add" class="main-section">
+                <header><h2>Create a new repository and Add files to it</h2></header>
+                <p>
+                    The <code>git add</code> command adds new or changed files in your working directory to the git
+                    staging area. <br>
+                    <code>git add</code> is an important command - without it, no <code>git commit</code> would ever
+                    do anything.
+
+                </p>
+                <p>
+                    <ol>
+                        <li>
+                            Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or 
+                            gitignore files. You can add these files after your project has been pushed to GitHub.
+                        </li>
+                        <br>
+                        <li>Open Terminal.</li>
+                        <br>
+                        <li>Change the current working directory to your local project.</li>
+                        <br>
+                        <li>
+                            Initialize the local directory as a Git repository.
+                            <br>
+                            <code>$ git init</code>
+                        </li>
+                        <br>
+                        <li>
+                            Add the files in your new local repository. This stages them for the first commit.
+                            <code>
+                                $ git add . <br>
+                                # Adds the files in the local repository and stages them for commit. To unstage a file, 
+                                use 'git reset HEAD YOUR-FILE'.
+                            </code>
+                        </li>
+                    </ol>    
+                </p>
             </section>
-            <section id="" class="main-section">
+            <section id="commit" class="main-section">
                 <header>Commit Changes</header>
                 <p></p>
                 <p></p>
                 <code></code>
             </section>
-            <section id="" class="main-section">
+            <section id="push" class="main-section">
                 <header>Push the Changes to Git</header>
                 <p></p>
                 <p></p>
                 <code></code>
             </section>
-            <section id="" class="main-section">
+            <section id="url" class="main-section">
                 <header>Get an URL with gh-pages</header>
                 <p></p>
                 <p></p>
