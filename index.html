@@ -8,93 +8,145 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div id="sidenav" class="left">
-        <nav id="navbar">
-            <header>
-                <h1>Github Technical Documentation</h1>
-            </header>
-            <ul class="nav">
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#add">Add to Git</a></li>
-                <li><a href="#commit">Commit Changes</a></li>
-                <li><a href="#push">Push the Changes to Git</a></li>
-                <li><a href="#url">Get an URL with gh-pages</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div>
-        <main id="main-doc">
-            <section id="introduction" class="main-section">
-                <header><h2>Introduction</h2></header>
-                <p>
-                    GitHub, Inc. is an American corporation that provides hosting for software development and version control using Git. 
-                    It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. 
-                    It provides access control and several collaboration features such as bug tracking, feature requests, task management, 
-                    and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018.
-                </p>
-                <p>
-                    GitHub offers its basic services free of charge. Its more advanced professional and enterprise services are commercial. 
-                    Free GitHub accounts are commonly used to host open-source projects. As of January 2019, GitHub offers unlimited private 
-                    repositories to all plans, including free accounts, but allowed only up to three collaborators per repository for free.
-                </p>
-                <code></code>
-            </section>
-            <section id="add" class="main-section">
-                <header><h2>Create a new repository and Add files to it</h2></header>
-                <p>
-                    The <code>git add</code> command adds new or changed files in your working directory to the git
-                    staging area. <br>
-                    <code>git add</code> is an important command - without it, no <code>git commit</code> would ever
-                    do anything.
+    <main id="main-doc">
+        <div class="container">
+            <div id="sidenav" class="box">
+                <nav id="navbar">
+                    <header>
+                        <h1>Github Technical Documentation</h1>
+                    </header>
+                        <div class="nav-link"><a href="#introduction">Introduction</a></div>
+                        <div class="nav-link"><a href="#add">Add to Git</a></div>
+                        <div class="nav-link"><a href="#commit">Commit Changes</a></div>
+                        <div class="nav-link"><a href="#push">Push the Changes to Git</a></div>
+                        <div class="nav-link"><a href="#url">Get an URL with gh-pages</a></div>
+                </nav>
+            </div>
+                <div id="technical-doc" class="box">
+                    <section id="introduction" class="main-section">
+                        <header><h2>Introduction</h2></header>
+                        <p>
+                            GitHub, Inc. is an American corporation that provides hosting for software development and version control using Git. 
+                            It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. 
+                            It provides access control and several collaboration features such as bug tracking, feature requests, task management, 
+                            and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018.
+                        </p>
+                        <p>
+                            GitHub offers its basic services free of charge. Its more advanced professional and enterprise services are commercial. 
+                            Free GitHub accounts are commonly used to host open-source projects. As of January 2019, GitHub offers unlimited private 
+                            repositories to all plans, including free accounts, but allowed only up to three collaborators per repository for free.
+                        </p>
+                        <code></code>
+                    </section>
+                    <section id="add" class="main-section">
+                        <header><h2>Create a new repository and Add files to it</h2></header>
+                        <p>
+                            The <code>git add</code> command adds new or changed files in your working directory to the git
+                            staging area. <br>
+                            <code>git add</code> is an important command - without it, no <code>git commit</code> would ever
+                            do anything.
 
-                </p>
-                <p>
-                    <ol>
-                        <li>
-                            Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or 
-                            gitignore files. You can add these files after your project has been pushed to GitHub.
-                        </li>
-                        <br>
-                        <li>Open Terminal.</li>
-                        <br>
-                        <li>Change the current working directory to your local project.</li>
-                        <br>
-                        <li>
-                            Initialize the local directory as a Git repository.
-                            <br>
-                            <code>$ git init</code>
-                        </li>
-                        <br>
-                        <li>
-                            Add the files in your new local repository. This stages them for the first commit.
+                        </p>
+                        <p>
+                            <ol>
+                                <li>
+                                    Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or 
+                                    gitignore files. You can add these files after your project has been pushed to GitHub.
+                                </li>
+                                <br>
+                                <li>Open Terminal.</li>
+                                <br>
+                                <li>Change the current working directory to your local project.</li>
+                                <br>
+                                <li>
+                                    Initialize the local directory as a Git repository. <br><br>
+                                    <code>$ git init</code>
+                                </li>
+                                <br>
+                                <li>
+                                    Add the files in your new local repository. This stages them for the first commit. <br><br>
+                                    <code>
+                                        $ git add . <br>
+                                        # Adds the files in the local repository and stages them for commit. To unstage a file, 
+                                        use 'git reset HEAD YOUR-FILE'.
+                                    </code>
+                                </li>
+                            </ol>    
+                        </p>
+                    </section>
+                    <section id="commit" class="main-section">
+                        <header><h2>Commit Changes</h2></header>
+                        <p>
+                            A <code>git commit</code> is a snapshot of the hierachy (Git tree) and the contents of the files 
+                            (Git blob) in a Git repository. These endpoints allow you to read and write commit objects to your
+                            Git database on GitHub.
+                        </p>
+                        <p>
+                            To commit the files that you've staged in your local repository, you need to write this in the terminal:
+                            <br><br> <code>$ git commit -m "First commit" <br>
+                                    # Commits the tracked changes and prepares them to be pushed to a remote repository. 
+                                    To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit 
+                                    and add the file again.</code> <br><br>
+                            In terminal, add the URL for the remote repository where your local repository will be pushed: <br> <br>
                             <code>
-                                $ git add . <br>
-                                # Adds the files in the local repository and stages them for commit. To unstage a file, 
-                                use 'git reset HEAD YOUR-FILE'.
+                                $ git remote add origin remote repository URL <br>
+                                # Sets the new remote <br>
+                                $ git remote -v <br>
+                                # Verifies the new remote URL <br>                            
                             </code>
-                        </li>
-                    </ol>    
-                </p>
-            </section>
-            <section id="commit" class="main-section">
-                <header>Commit Changes</header>
-                <p></p>
-                <p></p>
-                <code></code>
-            </section>
-            <section id="push" class="main-section">
-                <header>Push the Changes to Git</header>
-                <p></p>
-                <p></p>
-                <code></code>
-            </section>
-            <section id="url" class="main-section">
-                <header>Get an URL with gh-pages</header>
-                <p></p>
-                <p></p>
-                <code></code>
-            </section>
-        </main>
-    </div>
+                        </p>
+                        <code></code>
+                    </section>
+                    <section id="push" class="main-section">
+                        <header><h2>Push the Changes to Git</h2></header>
+                        <p>The git push command is used to upload local repository content to a remote repository. 
+                            Pushing is how you transfer commits from your local repository to a remote repo. 
+                            It's the counterpart to git fetch, but whereas fetching imports commits to local branches, 
+                            pushing exports commits to remote branches. Remote branches are configured using the git remote command. 
+                            Pushing has the potential to overwrite changes, caution should be taken when pushing. These issues are discussed below.</p>
+                        <p>
+                            To push the changes in your local repository to GitHub, you need to write in the terminal: <br>
+                            <br>
+                            <code>
+                                $ git push -u origin master <br>
+                                # Pushes the changes in your local repository up to the remote repository you specified as the origin
+                            </code>
+                            <br> 
+                        </p>
+                        <code></code>
+                    </section>
+                    <section id="url" class="main-section">
+                        <header><h2>Get an URL with gh-pages</h2></header>
+                        <p>
+                            If your site is an independent project, you can create a new repository to store your site's source code. 
+                            If your site is associated with an existing project, you can add the source code to that project's repository, 
+                            in a /docs folder on the default branch or on a different branch. For example, if you're creating a site to 
+                            publish documentation for a project that's already on GitHub, you may want to store the source code for 
+                            the site in the same repository as the project. <br>
+                            If you want to create a site in an existing repository, skip to the "Creating your site" section.
+                        </p>
+                        <p>
+                            Before you can create your site, you must have a repository for your site on GitHub. 
+                            If you're not creating your site in an existing repository, see <a href="#add">Create a new repository and Add files to it</a>
+                            <ol>
+                                <li>On GitHub, navigate to your site's repository.</li><br>
+                                <li>Decide which publishing source you want to use (in this case gh-pages).</li><br>
+                                <li>
+                                    If your chosen publishing source already exists, navigate to the publishing source. 
+                                    If your chosen publishing source doesn't exist, create the publishing source.
+                                </li><br>
+                                <li>
+                                    In the root of the publishing source, create a new file called <code>index.md</code>that contains 
+                                    the content you want to display on the main page of your site.
+                                </li><br>
+                                <li>Configure your publishing source.</li><br>
+                                <li>Under your repository name, click Settings.</li><br>
+                                <li>To see your published site, under "GitHub Pages", click your site's URL.</li><br>
+                            </ol>
+                        </p>
+                        <code></code>
+                    </section>
+                </div>
+    </main>
 </body>
 </html>
