@@ -1,10 +1,10 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
-    background: lightgray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,28 +14,27 @@ body {
 }
 
 #main-header{
-    background: red;
-    height: 100px;
+    height: 130px;
     width: 100%;
     margin: 0px;
     /* Header Centering */
     text-align: center;
     line-height: 100px;
     color: white;
-    border-bottom: 3px dashed black;
 }
 
 #navbar {
-    background: lightblue;
-    line-height: 30px;
+    min-height: 390px;
+    line-height: 50px;
+    text-align: center;
+    
 }
 
 #navbar ul li {
-      list-style: none;
-      margin: 5px;
-      padding: 5px;
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
 }
-
 
 .clearfix::after {
     content: "";
@@ -45,51 +44,48 @@ body {
 
 aside {
     float: left;
-    width: 30%;
+    /* width: 30%; */
+    width: 200px;
 }
 
 #technical-doc {
-    float: right;
+    margin-left: 200px;
+    /*
+    The distribution of the nav and main content can be done by percentages
     width: calc(70% - 60px);
+    */
     padding: 30px;
-    background: green;
+}
+
+#header-nav {
+    font-size: 10px;
 }
 
 @media screen and (max-width: 600px) {
     aside {
-      float: none;
+      float: left;
       width: 100%;
     }
     #technical-doc {
-        float: none;
+        float: right;
         width: 100%;
     }
-
   }
-/*
+  
 .nav-link {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-a {
-    text-decoration: none;
-}
 
 header {
     font-weight: bold;
-    font-size: 22px;
-}
 
-p {
-    font-size: 18px;
 }
 
 code {
     font-size: 15px;
 }
-*/
+
 footer {
     background: black;
     color: white;

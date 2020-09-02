@@ -10,14 +10,12 @@
 <body>
     <main id="main-doc">
         <header id="main-header">
-            <h1>Main Header</h1>
+            <img src="images/github.png" alt="">
         </header>
         <div class="clearfix"></div>
         <aside id="sidenav">
             <nav id="navbar">
-                <header>
-                    <h2>Github Technical Documentation</h2>
-                </header>
+                <header id="header-nav"><h2>Technical Documentation</h2></header>
                 <ul>
                     <li><a class="nav-link" href="#introduction">Introduction</a></div></li>
                     <li><a class="nav-link" href="#add">Add to Git</a></div></li>
@@ -31,30 +29,32 @@
         <div id="technical-doc">
             <section id="introduction" class="main-section">
                 <article>
-                    <header><h2>Introduction</h2></header>
+                    <header><h2>Introduction</h2></header><br>
                     <p>
                         GitHub, Inc. is an American corporation that provides hosting for software development and version control using Git. 
                         It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. 
                         It provides access control and several collaboration features such as bug tracking, feature requests, task management, 
                         and wikis for every project. Headquartered in California, it has been a subsidiary of Microsoft since 2018.
                     </p>
+                    <br>
                     <p>
                         GitHub offers its basic services free of charge. Its more advanced professional and enterprise services are commercial. 
                         Free GitHub accounts are commonly used to host open-source projects. As of January 2019, GitHub offers unlimited private 
                         repositories to all plans, including free accounts, but allowed only up to three collaborators per repository for free.
                     </p>
+                    <br>
                 </article> 
             </section>
             <section id="add" class="main-section">
                 <article>
-                    <header><h2>Create a new repository and Add files to it</h2></header>
+                    <header><h2>Create a new repository and Add files to it</h2></header><br>
                     <p>
                         The <code>git add</code> command adds new or changed files in your working directory to the git
                         staging area. <br>
                         <code>git add</code> is an important command - without it, no <code>git commit</code> would ever
                         do anything.
-
                     </p>
+                    <br>
                     <p>
                         <ol>
                             <li>
@@ -81,11 +81,12 @@
                             </li>
                         </ol>    
                     </p>
+                    <br>
                 </article>
             </section>
             <section id="commit" class="main-section">
                 <article>
-                    <header><h2>Commit Changes</h2></header>
+                    <header><h2>Commit Changes</h2></header><br>
                     <p>
                         A <code>git commit</code> is a snapshot of the hierachy (Git tree) and the contents of the files 
                         (Git blob) in a Git repository. These endpoints allow you to read and write commit objects to your
@@ -105,11 +106,12 @@
                             # Verifies the new remote URL <br>                            
                         </code>
                     </p>
+                    <br>
                 </article>
             </section>
             <section id="push" class="main-section">
                 <article>
-                    <header><h2>Push the Changes to Git</h2></header>
+                    <header><h2>Push the Changes to Git</h2></header><br>
                     <p>The git push command is used to upload local repository content to a remote repository. 
                         Pushing is how you transfer commits from your local repository to a remote repo. 
                         It's the counterpart to git fetch, but whereas fetching imports commits to local branches, 
@@ -121,25 +123,29 @@
                         <code>
                             $ git push -u origin master <br>
                             # Pushes the changes in your local repository up to the remote repository you specified as the origin
-                        </code>
-                        <br> 
+                        </code> 
                     </p>
+                    <br>
                 </article>
             </section>
             <section id="url" class="main-section">
                 <article>
-                    <header><h2>Get an URL with gh-pages</h2></header>
+                    <header><h2>Get an URL with gh-pages</h2></header><br>
                     <p>
                         If your site is an independent project, you can create a new repository to store your site's source code. 
                         If your site is associated with an existing project, you can add the source code to that project's repository, 
                         in a /docs folder on the default branch or on a different branch. For example, if you're creating a site to 
                         publish documentation for a project that's already on GitHub, you may want to store the source code for 
-                        the site in the same repository as the project. <br>
+                        the site in the same repository as the project. <br><br>
                         If you want to create a site in an existing repository, skip to the "Creating your site" section.
                     </p>
+                    <br>
                     <p>
                         Before you can create your site, you must have a repository for your site on GitHub. 
                         If you're not creating your site in an existing repository, see <a href="#add">Create a new repository and Add files to it</a>
+                    </p>
+                    <p>
+                        <br>
                         <ol>
                             <li>On GitHub, navigate to your site's repository.</li><br>
                             <li>Decide which publishing source you want to use (in this case gh-pages).</li><br>
@@ -161,7 +167,7 @@
         </div>
         <div class="clearfix"></div>
         <footer>
-            Albert Maresma Web
+            Basic Github explained by Albert Maresma
         </footer>
     </main>
 </body>
