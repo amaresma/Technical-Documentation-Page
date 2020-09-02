@@ -1,24 +1,72 @@
-#main-doc {
-    height: auto;
-    width: auto;
-    display: flex;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-@media screen and (max-width: 600px) {
-    #navbar {
-        width: 100%;
-    }
+body {
+    background: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-doc {
+    width: auto;
+    margin: 0px auto;
+}
+
+#main-header{
+    background: red;
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    /* Header Centering */
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    border-bottom: 3px dashed black;
 }
 
 #navbar {
-    position: fixed;
-    width: 300px;
-    height: 55%;
-    text-align: center;
-    background-color: blue;
-    float: left;   
+    background: lightblue;
+    line-height: 30px;
 }
 
+#navbar ul li {
+      list-style: none;
+      margin: 5px;
+      padding: 5px;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+#technical-doc {
+    float: right;
+    width: calc(70% - 60px);
+    padding: 30px;
+    background: green;
+}
+
+@media screen and (max-width: 600px) {
+    aside {
+      float: none;
+      width: 100%;
+    }
+    #technical-doc {
+        float: none;
+        width: 100%;
+    }
+
+  }
+/*
 .nav-link {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -27,15 +75,6 @@
 
 a {
     text-decoration: none;
-}
-
-#technical-doc {
-    width: auto;
-    margin-left: 320px;
-    background-color: red;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: right; 
 }
 
 header {
@@ -50,19 +89,11 @@ p {
 code {
     font-size: 15px;
 }
-
-
-/*
-#header-img-left {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-.header {
-    padding: 60px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 30px;
-}
 */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
